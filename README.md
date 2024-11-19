@@ -13,7 +13,6 @@ Clone the project from Command prompt or Bash:
 Install all dependencies and devDependencies
 ```bash
   npm install
-  npm run start
 ```
 Run the development server:
 ```bash
