@@ -9,7 +9,7 @@ const MovieSectionContainer=()=>{
         <div className="bg-black">
         {
            ( movie.NowPlaying && movie.popularMovie && movie.HorrorMovie && movie.ComedyMovie && movie.SuspenseMovie) &&
-            <div className="xl:-mt-[250px] relative z-30 md:m-0 xl:p-0  md:-mt-[28px] -mt-[140px] lg:-mt-[150px]">
+            <div className="xl:-mt-[250px] relative z-30 md:m-0 xl:p-0  md:-mt-[28px] -mt-[140px] lg:-mt-[170px]">
             <MovieCards movieDetail={movie.NowPlaying.movieList} title ={'Now Playing'}/>
             <MovieCards movieDetail={movie.HorrorMovie} title ={'Mystery'}/>
             <MovieCards movieDetail={movie.popularMovie} title ={'Horror'}/>
