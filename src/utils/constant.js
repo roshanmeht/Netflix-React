@@ -4,6 +4,8 @@ export const netflix_background="https://assets.nflxext.com/ffe/siteui/vlv3/f272
 
 export const netflix_avatar = "https://occ-0-6245-2164.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABUMx6z-7bB7tyN-OZXt6i8BXuZHN5EWBr7MQy7ilhubrpI2yOofVtT-QmoO6VJt7I1ewosmuQa29BGFfOOVcJxdKx1sT-co.png?r=201";
 
+export const search_icon="https://raw.githubusercontent.com/roshanmeht/FoodApp-React/a1cef9412bbc6b3643e47b96c07113e1764268e5/%E2%80%94Pngtree%E2%80%94search%20icon_4490393.png"
+
 export const options = {
     method: 'GET',
     headers: {
