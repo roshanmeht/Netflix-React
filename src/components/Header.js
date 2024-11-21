@@ -4,9 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { netflix_logo } from "../utils/constant";
 import { useAuthStateChange } from "./CustomHooks/UseAuthStateChange";
 import { signOut } from "firebase/auth";
+import { Link } from "react-router-dom";
+import { LanguageChange, ShowSearchPage } from "../utils/LanguageSlice";
+import Search from "./Search";
 
 const Header = () => {
     const user = useSelector((store) => store.user);
+    const search = useSelector((store) => store.LanguageConstant.searchPage);
+    console.log('Ssss..',search);
+    
     const dispatch = useDispatch();
 
     function signoutHandler() {
@@ -15,6 +21,11 @@ const Header = () => {
         }).catch((error) => {
             // An error happened.
         });
+    }
+
+    const DefaultLanguageHandler=()=>{
+        dispatch(LanguageChange("en"));
+        dispatch(ShowSearchPage());
     }
 
     useAuthStateChange();//custom hook to track authStateChange
@@ -26,6 +37,7 @@ const Header = () => {
             </div>
             {
                     (auth.currentUser && user) &&
+                    
                     (<div className="flex justify-between  w-[86vw] ">
                         <div className="mt-3 xl:w-[48vw] md:w-[57vw]">
                             <ul className="lg:text-white lg:flex   lg:justify-around lg:ml-2 cursor-pointer hidden p-1">
@@ -38,9 +50,18 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className="flex h-[50px]">
+
+
+                        
+                        <Link to="/search">
+                        <img src="https://static-00.iconduck.com/assets.00/search-icon-256x256-v6gfhlc1.png" alt='search-icon' className="md:w-[23px] md:h-[23px] md:my-[13px] md:mx-5 w-[18px] h-[18px] mx-5 my-3 cursor-pointer" onClick={DefaultLanguageHandler}></img>
+                        </Link>
+                        
+
+
                         <img src={user.photo} className="md:w-[50px] md:p-2 md:h-auto md:mt-0 md:mr-0 w-[25px] h-[25px] mt-2 mr-2" alt='user-profile'></img>
                         {/* <p className="w-[100px]font-bold text-red-500">{user.name}</p> */}
-                        <button onClick={signoutHandler} className="cursor-pointer text-red-600 lg:mr-12 lg:mb-0 mr-0  mb-2 md:mr-16 md:mt-1 ">Sign out</button>
+                        <button onClick={signoutHandler} className="cursor-pointer text-red-600 lg:mr-12 lg:mb-0 mr-0  mb-2 md:mr-16 md:mt-1 w-[80px] -ml-2">Sign out</button>
                         </div>
                     </div>)
 
