@@ -4,7 +4,7 @@ const LangSlice=createSlice({
     name:"LanguageSlice",
     initialState:{
         lang:"en",
-        searchPage:"false"
+        searchPage:false
     },
     reducers:{
         LanguageChange:(state,action)=>{
