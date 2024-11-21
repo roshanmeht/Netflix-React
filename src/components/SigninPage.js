@@ -31,7 +31,6 @@ const SigninPage = () => {
 
     function handleFormValidation() {
         const message = formValidation(email.current.value, password.current.value);
-        console.log('auth', auth);
 
         setvalidationMessage(message);
 
@@ -42,7 +41,6 @@ const SigninPage = () => {
 
             createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
-                    console.log('sign up api executed');
                     // Signed up
                     const user = userCredential.user;
                     //profile update
@@ -50,8 +48,6 @@ const SigninPage = () => {
                         displayName: yourName.current.value, photoURL: netflix_avatar
                     }).then(() => {
                         const { displayName, photoURL, email } = auth.currentUser;
-                        console.log('main', auth.currentUser);
-                        console.log('mainn', user);
                         dispatch(addUser({ name: displayName, Email: email, photo: photoURL }));
                         // navigate('/browse');
                     }).catch((error) => {
@@ -73,7 +69,6 @@ const SigninPage = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                      console.log('firebase-user',user);
                 })
                 .catch((error) => {
                     const errorCode = error.code;

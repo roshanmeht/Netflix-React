@@ -10,7 +10,6 @@ export const useFetchMovieTrailer= (id)=>{
         const movieTrailerLinkJson = await movieTrailerLink.json();
         const TrailerData = movieTrailerLinkJson.results.filter((movie)=>movie.type==='Trailer');
           const Trailer = TrailerData ? TrailerData[0] : movieTrailerLinkJson[0];
-          console.log(TrailerData);
           dispatch(addMovieTrailer(Trailer));
       }
     

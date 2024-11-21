@@ -9,7 +9,6 @@ const useSuspensefulMovies = () => {
     async function fetchSuspenseMovies(){
        const data= await fetch(DiscoverMovieUrl+'10402',options);
        const Suspense =await  data.json();
-       console.log(Suspense);
        dispatch(addSuspenseMovie(Suspense.results));
     }
 

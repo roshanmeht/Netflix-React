@@ -9,7 +9,6 @@ const useHorrorMovie = () => {
     async function fetchHorrorMovies(){
        const data= await fetch(DiscoverMovieUrl+'10770',options);
        const Horror =await  data.json();
-       console.log(Horror);
        dispatch(addHorrorMovie(Horror.results));
     }
 

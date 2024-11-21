@@ -3,8 +3,7 @@ import lang from "../utils/LangConstant";
 
 const SearchBar = () => {
   const language= useSelector((store)=>store.LanguageConstant.lang);
-  //console.log('lang',language);
-
+ 
   return (
     <div className=" md:h-[60vh] md:flex md:justify-center md:items-center relative lg:bottom-[12px] xl:bottom-5 md:bottom-[75px]  h-[60vh] md:-mt-[1%] mt-[30%]" >
     <form className="flex flex-col items-center md:flex-row md:items-start">

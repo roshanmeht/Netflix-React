@@ -2,8 +2,6 @@ import { useSelector } from "react-redux";
 import MovieCards from "./MovieCards";
 const MovieSectionContainer=()=>{
     const movie = useSelector((store)=>store.NowPlayingMovie);
-
-    console.log('Now',movie);
    
     return(
         <div className="bg-black">

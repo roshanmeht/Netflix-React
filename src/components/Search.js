@@ -2,16 +2,13 @@ import { Link } from "react-router-dom"
 import { netflix_background } from "../utils/constant"
 import SearchBar from "./SearchBar"
 import { LangOptions } from "../utils/LangConstant"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { LanguageChange } from "../utils/LanguageSlice"
 
 const Search = () => {
-  const check = useSelector((store)=>store.LanguageConstant);
-  console.log(check);
     const dispatch=useDispatch();
     const handleLangChange=(e)=>{
       dispatch(LanguageChange(e.target.value));
-      console.log(e.target.value);
     }
   return (
     <div  className="xl:flex  xl:justify-center xl:items-center xl:h-[78vh] md:flex md:justify-center flex

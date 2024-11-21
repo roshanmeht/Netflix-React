@@ -8,8 +8,6 @@ const VideoBackground = ({movieId})=>{
      if(!MovieSlice.MovieTrailer) return;
 
      const TrailerKey = MovieSlice.MovieTrailer.key;
-     console.log(TrailerKey);
-     
   
     return(
      <div className="">

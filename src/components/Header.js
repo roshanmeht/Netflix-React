@@ -6,13 +6,9 @@ import { useAuthStateChange } from "./CustomHooks/UseAuthStateChange";
 import { signOut } from "firebase/auth";
 import { Link } from "react-router-dom";
 import { LanguageChange, ShowSearchPage } from "../utils/LanguageSlice";
-import Search from "./Search";
 
 const Header = () => {
     const user = useSelector((store) => store.user);
-    const search = useSelector((store) => store.LanguageConstant.searchPage);
-    console.log('Ssss..', search);
-
     const dispatch = useDispatch();
 
     function signoutHandler() {

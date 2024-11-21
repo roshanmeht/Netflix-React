@@ -8,7 +8,6 @@ const useFetchMovieCategoryId = () => {
     async function movieCategoryId(){
         const data=await fetch('https://api.themoviedb.org/3/genre/movie/list?language=en',options);
         const id = await data.json();
-        console.log('id',id);
         dispatch(addMovieCategoryId(id.genres));
 
         // if(cateId.CategoryId){

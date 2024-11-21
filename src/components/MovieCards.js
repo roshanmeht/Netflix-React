@@ -7,7 +7,7 @@ const MovieCards = ({movieDetail , title}) => {
       {
        
         movieDetail.map((item)=>{
-            return <MovieCardSlice image={item}/>
+            return <MovieCardSlice image={item} key={item.id}/>
            
         })
       }

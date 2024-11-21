@@ -11,10 +11,7 @@ async function MovieCategory(){
 
    let fetchData=await fetch(DiscoverMovieUrl + cateId.CategoryId[0].id , options);
    const result =await fetchData.json();
-
-   console.log('cat',result); 
-
-  
+   
 }
  
 useEffect(()=>{

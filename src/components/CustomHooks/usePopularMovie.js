@@ -8,7 +8,6 @@ const usePopularMovies = ()=>{
     async function fetchPopularMovies(){
        const data= await fetch(DiscoverMovieUrl+'9648',options);
        const popularMovies =await  data.json();
-       console.log('popular',popularMovies);
        dispatch(addPopularMovie(popularMovies.results));
     }
 
