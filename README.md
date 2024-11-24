@@ -23,11 +23,12 @@ Run the development server:
 ## Features
 
 - Dynamic Movie Listings : Fetch and display movies from an API.
-- Responsive Design : Fully responsive layout for desktop and mobile.
+- Responsive Design : Fully responsive layout for desktop,tablet and mobile.
 - Interactive UI : Smooth scrolling and hover effects for a Netflix-like experience.
 - Authentication : Secure user sign-in and sign-up using Firebase.
 - Trailer Preview : Watch trailers directly within the app using YouTube API.
 - Categorized Content: Organize movies and shows into categories like trending, top-rated, and genres.
+- Search Functionality: Search for movies by title using TMDB API
 
 
 
@@ -46,7 +47,10 @@ Run the development server:
 ![Login-Signup Page](https://github.com/roshanmeht/Netflix-React/blob/main/Screenshot%20(7).png?raw=true)
 
 - Browse Page
-![Browse Page](https://github.com/roshanmeht/Netflix-React/blob/main/Screenshot%20(12).png?raw=true)
+![Browse Page](https://raw.githubusercontent.com/roshanmeht/Netflix-React/a2dfb39a22d663b8d48f7293594c2948c210fae3/Screenshot%20(14).png)
+
+-Search Page
+![Search Page](https://raw.githubusercontent.com/roshanmeht/Netflix-React/fb4c214a6f9fb811a483376563a74ebeeb745584/Screenshot%20(16).png)
 
 
 
