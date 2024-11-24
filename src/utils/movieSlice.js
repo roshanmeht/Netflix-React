@@ -10,8 +10,9 @@ const movieSlice = createSlice({
         popularMovie:null,
         HorrorMovie:null,
         ComedyMovie:null,
-        SuspenseMovie:null
-
+        SuspenseMovie:null,
+        SearchedMovieKeyword:null,
+        
     },
     reducers:{
         addNowPlayingMovies:(state,action)=>{
@@ -34,9 +35,15 @@ const movieSlice = createSlice({
         },
         addSuspenseMovie:(state,action)=>{
             state.SuspenseMovie = action.payload;
+        },
+        addSearchedMovieKeyword:(state , action)=>{
+            state.SearchedMovieKeyword = action.payload;
+        },
+        removeMovieKeyword:(state,action)=>{
+            state.SearchedMovieKeyword= action.payload;
         }
     }
 })
 
-export const{addNowPlayingMovies , addMovieTrailer , addMovieCategoryId , addPopularMovie , addHorrorMovie ,addComedyMovie ,addSuspenseMovie} = movieSlice.actions; 
+export const{addNowPlayingMovies , addMovieTrailer , addMovieCategoryId , addPopularMovie , addHorrorMovie ,addComedyMovie ,addSuspenseMovie ,addSearchedMovieKeyword , removeMovieKeyword} = movieSlice.actions; 
 export default movieSlice.reducer;

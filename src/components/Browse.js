@@ -11,7 +11,6 @@ import Search from "./Search";
 
 const Browse = () => {
     const LanguageChange = useSelector((store)=>store.LanguageConstant.searchPage);
-    console.log(LanguageChange);
 
     useNowPlayingMovies(); //custom hook to fetch movies list
     usePopularMovies();

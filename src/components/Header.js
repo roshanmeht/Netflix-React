@@ -44,7 +44,7 @@ const Header = () => {
                     {!changeLogo &&
                         (<div className="mt-3 xl:w-[48vw] md:w-[57vw]">
                             <ul className="lg:text-white lg:flex   lg:justify-around lg:ml-2 cursor-pointer hidden p-1">
-                                <li>Home</li>
+                                <li className="font-bold">Home</li>
                                 <li>TV Shows</li>
                                 <li>Movies</li>
                                 <li>New & Popular</li>

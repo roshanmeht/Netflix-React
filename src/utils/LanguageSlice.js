@@ -10,7 +10,7 @@ const LangSlice=createSlice({
         LanguageChange:(state,action)=>{
            state.lang=action.payload;
         },
-        ShowSearchPage:(state,action)=>{
+        ShowSearchPage:(state)=>{
             state.searchPage = !state.searchPage;
         }
     }
